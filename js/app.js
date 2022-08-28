@@ -82,9 +82,9 @@ const app = {
     localStorage.setItem(PLAYER_STORAGE_KEY, JSON.stringify(this.config));
   },
   loadConfig: function () {
-    this.isRandom = this.config.isRandom;
-    this.isRepeat = this.config.isRepeat;
-    this.currentIndex = this.config.currentIndex;
+    this.isRandom = this.config.isRandom || false;
+    this.isRepeat = this.config.isRepeat || false;
+    this.currentIndex = this.config.currentIndex || 0;
   }
   ,
   render: function () {
